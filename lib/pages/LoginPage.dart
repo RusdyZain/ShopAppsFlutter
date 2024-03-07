@@ -103,7 +103,9 @@ class LoginPage extends StatelessWidget {
               ),
               SizedBox(height: 40),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, "homePage");
+                },
                 child: Container(
                   alignment: Alignment.center,
                   margin: EdgeInsets.symmetric(horizontal: 20),
