@@ -45,18 +45,6 @@ class BottomCartSheet extends StatelessWidget {
                               child: Stack(
                                 alignment: Alignment.center,
                                 children: [
-                                  Container(
-                                    margin: EdgeInsets.only(
-                                      top: 10,
-                                      right: 60,
-                                    ),
-                                    height: 90,
-                                    width: 100,
-                                    decoration: BoxDecoration(
-                                      color: Color(0xFF475269),
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                  ),
                                   Image.asset(
                                     "images/$i.png",
                                     height: 130,
@@ -310,7 +298,7 @@ class BottomCartSheet extends StatelessWidget {
                       ),
                       SizedBox(height: 8),
                       Text(
-                        "\$50",
+                        "\$40",
                         style: TextStyle(
                           fontSize: 22,
                           color: Colors.redAccent,

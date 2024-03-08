@@ -35,15 +35,6 @@ class RowItemWidget extends StatelessWidget {
                   Stack(
                     alignment: Alignment.center,
                     children: [
-                      Container(
-                        margin: EdgeInsets.only(top: 20, right: 70),
-                        height: 120,
-                        width: 130,
-                        decoration: BoxDecoration(
-                          color: Color(0xFF4475269),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
                       Image.asset(
                         "images/$i.png",
                         height: 150,

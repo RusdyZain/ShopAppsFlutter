@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shopapps/pages/ItemPage.dart';
 
 class AllItemsWidget extends StatelessWidget {
   const AllItemsWidget({super.key});
@@ -12,7 +13,7 @@ class AllItemsWidget extends StatelessWidget {
       physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       children: [
-        for (int i = 1; i < 5; i++)
+        for (int i = 1; i < 6; i++)
           Container(
             padding: EdgeInsets.only(
               left: 15,
@@ -35,7 +36,12 @@ class AllItemsWidget extends StatelessWidget {
               children: [
                 InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, "itemPage");
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ItemPage(index: i - 1),
+                      ),
+                    );
                   },
                   child: Padding(
                     padding: EdgeInsets.all(10),

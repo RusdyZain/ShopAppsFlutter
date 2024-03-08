@@ -3,7 +3,9 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:shopapps/widgets/ItemBottomNavbar.dart';
 
 class ItemPage extends StatelessWidget {
-  const ItemPage({super.key});
+  final int index;
+
+  const ItemPage({key, required this.index}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,6 @@ class ItemPage extends StatelessWidget {
                   children: [
                     InkWell(
                       onTap: () {
-                        // Goes back
                         Navigator.pop(context);
                       },
                       child: Container(
@@ -80,7 +81,7 @@ class ItemPage extends StatelessWidget {
                       ),
                     ),
                     Image.asset(
-                      "images/1.png",
+                      "images/${index + 1}.png", // Gunakan index untuk menampilkan gambar
                       height: 350,
                       width: 350,
                       fit: BoxFit.contain,
