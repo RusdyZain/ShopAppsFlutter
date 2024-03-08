@@ -14,7 +14,6 @@ class HomePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //Custom App Bar
               Padding(
                 padding: EdgeInsets.all(15),
                 child: Row(

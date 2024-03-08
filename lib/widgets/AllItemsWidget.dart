@@ -57,7 +57,7 @@ class AllItemsWidget extends StatelessWidget {
                   child: Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "Nike Shoe",
+                      "Shoe Family ${i}",
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -69,7 +69,7 @@ class AllItemsWidget extends StatelessWidget {
                 Container(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "New Nike Shoe For Men",
+                    "New Shoe For Our Family",
                     style: TextStyle(
                         fontSize: 15,
                         color: Color(0xFF475269).withOpacity(0.7)),
@@ -81,7 +81,7 @@ class AllItemsWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "\$55",
+                        "\$5${i + 2}",
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w500,

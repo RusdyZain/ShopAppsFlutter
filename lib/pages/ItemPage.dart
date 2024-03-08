@@ -81,7 +81,7 @@ class ItemPage extends StatelessWidget {
                       ),
                     ),
                     Image.asset(
-                      "images/${index + 1}.png", // Gunakan index untuk menampilkan gambar
+                      "images/${index + 1}.png",
                       height: 350,
                       width: 350,
                       fit: BoxFit.contain,

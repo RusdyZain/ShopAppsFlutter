@@ -49,7 +49,7 @@ class RowItemWidget extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Nike Shoe",
+                          "Shoe ${i}",
                           style: TextStyle(
                             color: Color(0xFF475269),
                             fontSize: 23,
