@@ -49,7 +49,7 @@ class RowItemWidget extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Shoe ${i}",
+                          "Shoe Family ${i}",
                           style: TextStyle(
                             color: Color(0xFF475269),
                             fontSize: 23,
@@ -68,7 +68,7 @@ class RowItemWidget extends StatelessWidget {
                         Row(
                           children: [
                             Text(
-                              "\$50",
+                              "\$5${i + 2}",
                               style: TextStyle(
                                 color: Colors.redAccent,
                                 fontSize: 22,

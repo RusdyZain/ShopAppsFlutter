@@ -71,15 +71,6 @@ class ItemPage extends StatelessWidget {
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
-                    Container(
-                      height: 230,
-                      width: 230,
-                      margin: EdgeInsets.only(top: 20, right: 70),
-                      decoration: BoxDecoration(
-                        color: Color(0xFF475269),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
                     Image.asset(
                       "images/${index + 1}.png",
                       height: 350,
@@ -121,7 +112,7 @@ class ItemPage extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          "\$55",
+                          "\$5${index + 3}",
                           style: TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.w500,
