@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shopapps/widgets/BottomCartSheet.dart';
+import 'package:sliding_sheet2/sliding_sheet2.dart';
 
 class ItemBottomNavbar extends StatelessWidget {
   const ItemBottomNavbar({super.key});
@@ -64,10 +66,26 @@ class ItemBottomNavbar extends StatelessWidget {
                     spreadRadius: 1,
                   ),
                 ]),
-            child: Icon(
-              Icons.shopping_bag,
-              color: Colors.white,
-              size: 45,
+            child: InkWell(
+              onTap: () {
+                showSlidingBottomSheet(
+                  context,
+                  builder: (context) {
+                    return SlidingSheetDialog(
+                      elevation: 8,
+                      cornerRadius: 16,
+                      builder: (context, state) {
+                        return BottomCartSheet();
+                      },
+                    );
+                  },
+                );
+              },
+              child: Icon(
+                Icons.shopping_bag,
+                color: Colors.white,
+                size: 45,
+              ),
             ),
           ),
         ],
