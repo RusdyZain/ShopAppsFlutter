@@ -1,12 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shopapps/widgets/Pallete.dart';
+import 'package:shopapps/data/data.dart';
 
 class BottomCartSheet extends StatelessWidget {
-  const BottomCartSheet({super.key});
+  final List<ShoeItem> cartItems;
+
+  const BottomCartSheet({Key? key, required this.cartItems}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    int subtotal = 0;
+    for (ShoeItem item in cartItems) {
+      subtotal += int.parse(item.price.replaceAll('\$', ''));
+    }
+
     return Material(
       child: Container(
         height: 600,
@@ -20,7 +28,7 @@ class BottomCartSheet extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    for (int i = 1; i < 4; i++)
+                    for (ShoeItem item in cartItems)
                       Container(
                         margin:
                             EdgeInsets.symmetric(vertical: 10, horizontal: 15),
@@ -39,37 +47,37 @@ class BottomCartSheet extends StatelessWidget {
                         ),
                         child: Row(
                           children: [
-                            InkWell(
-                              onTap: () {
-                                Navigator.pushNamed(context, "itemPage");
-                              },
-                              child: Stack(
-                                alignment: Alignment.center,
-                                children: [
-                                  Image.asset(
-                                    "images/$i.png",
-                                    height: 130,
-                                    width: 130,
-                                    fit: BoxFit.contain,
-                                  )
-                                ],
+                            Container(
+                              width: 100,
+                              child: Image.asset(
+                                item.image,
+                                fit: BoxFit.contain,
                               ),
                             ),
-                            Padding(
-                              padding: EdgeInsets.symmetric(vertical: 30),
+                            SizedBox(width: 10),
+                            Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                    MainAxisAlignment.spaceEvenly,
                                 children: [
                                   Text(
-                                    "Nike Shoe",
+                                    item.title,
                                     style: TextStyle(
                                       color: Pallete.secondColor,
-                                      fontSize: 23,
-                                      fontWeight: FontWeight.w500,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   ),
+                                  SizedBox(height: 5),
+                                  Text(
+                                    "\$${item.price}",
+                                    style: TextStyle(
+                                      color: Pallete.secondColor,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                  SizedBox(height: 5),
                                   Row(
                                     children: [
                                       Container(
@@ -90,20 +98,19 @@ class BottomCartSheet extends StatelessWidget {
                                         child: Icon(
                                           CupertinoIcons.minus,
                                           size: 18,
+                                          color: Pallete.secondColor,
                                         ),
                                       ),
-                                      Container(
-                                        margin: EdgeInsets.symmetric(
-                                            horizontal: 10),
-                                        child: Text(
-                                          "02",
-                                          style: TextStyle(
-                                            color: Pallete.secondColor,
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.w500,
-                                          ),
+                                      SizedBox(width: 10),
+                                      Text(
+                                        "1",
+                                        style: TextStyle(
+                                          color: Pallete.secondColor,
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w500,
                                         ),
                                       ),
+                                      SizedBox(width: 10),
                                       Container(
                                         padding: EdgeInsets.all(5),
                                         decoration: BoxDecoration(
@@ -122,6 +129,7 @@ class BottomCartSheet extends StatelessWidget {
                                         child: Icon(
                                           CupertinoIcons.add,
                                           size: 18,
+                                          color: Pallete.secondColor,
                                         ),
                                       ),
                                     ],
@@ -129,139 +137,17 @@ class BottomCartSheet extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            Spacer(),
-                            Padding(
-                              padding: EdgeInsets.symmetric(vertical: 25),
-                              child: Column(
-                                children: [
-                                  Container(
-                                    padding: EdgeInsets.all(8),
-                                    decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      borderRadius: BorderRadius.circular(10),
-                                      boxShadow: [
-                                        BoxShadow(
-                                          color: Pallete.secondColor
-                                              .withOpacity(0.4),
-                                          blurRadius: 5,
-                                          spreadRadius: 1,
-                                        )
-                                      ],
-                                    ),
-                                    child: Icon(
-                                      Icons.delete,
-                                      color: Colors.red,
-                                      size: 20,
-                                    ),
-                                  ),
-                                  Spacer(),
-                                  Text(
-                                    "\$50",
-                                    style: TextStyle(
-                                      color: Pallete.secondColor,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 20,
-                                    ),
-                                  )
-                                ],
+                            IconButton(
+                              onPressed: () {},
+                              icon: Icon(
+                                Icons.delete,
+                                color: Colors.red,
+                                size: 24,
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
-                    Container(
-                      margin:
-                          EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-                      padding: EdgeInsets.all(15),
-                      decoration: BoxDecoration(
-                        color: Pallete.mainColor,
-                        borderRadius: BorderRadius.circular(0.3),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Pallete.secondColor.withOpacity(0.3),
-                            spreadRadius: 1,
-                            blurRadius: 5,
-                          )
-                        ],
-                      ),
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "Delivery Fee:",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  color: Pallete.secondColor,
-                                ),
-                              ),
-                              Text(
-                                "\$20",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  color: Pallete.secondColor,
-                                ),
-                              )
-                            ],
-                          ),
-                          Divider(
-                            height: 20,
-                            thickness: 0.5,
-                            color: Pallete.secondColor,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "Sub-Total:",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  color: Pallete.secondColor,
-                                ),
-                              ),
-                              Text(
-                                "\$60",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  color: Pallete.secondColor,
-                                ),
-                              )
-                            ],
-                          ),
-                          Divider(
-                            height: 20,
-                            thickness: 0.4,
-                            color: Pallete.secondColor,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "Discount:",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  color: Pallete.secondColor,
-                                ),
-                              ),
-                              Text(
-                                "-\$10",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.redAccent,
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
                   ],
                 ),
               ),
@@ -288,6 +174,7 @@ class BottomCartSheet extends StatelessWidget {
                 children: [
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         "Total",
@@ -299,7 +186,7 @@ class BottomCartSheet extends StatelessWidget {
                       ),
                       SizedBox(height: 8),
                       Text(
-                        "\$40",
+                        "\$$subtotal",
                         style: TextStyle(
                           fontSize: 22,
                           color: Colors.redAccent,
@@ -320,7 +207,7 @@ class BottomCartSheet extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Text(
-                        "Check out",
+                        "Checkout",
                         style: TextStyle(
                           fontSize: 18,
                           color: Colors.white,
@@ -328,7 +215,7 @@ class BottomCartSheet extends StatelessWidget {
                         ),
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),

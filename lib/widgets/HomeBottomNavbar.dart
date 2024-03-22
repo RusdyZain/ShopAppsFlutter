@@ -36,7 +36,7 @@ class HomeBottomNavbar extends StatelessWidget {
                     elevation: 8,
                     cornerRadius: 16,
                     builder: (context, state) {
-                      return BottomCartSheet();
+                      return BottomCartSheet(cartItems: []);
                     },
                   );
                 },

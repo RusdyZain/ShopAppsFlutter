@@ -61,8 +61,9 @@ class AllItemsWidget extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) =>
-                                    ItemPage(index: shoeItem.id),
+                                builder: (context) => ItemPage(
+                                  shoeItem: shoeItem,
+                                ),
                               ),
                             );
                           },
