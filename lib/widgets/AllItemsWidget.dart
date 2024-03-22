@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shopapps/pages/ItemPage.dart';
+import 'package:shopapps/widgets/Pallete.dart';
 
 class AllItemsWidget extends StatelessWidget {
   const AllItemsWidget({super.key});
@@ -22,11 +23,11 @@ class AllItemsWidget extends StatelessWidget {
             ),
             margin: EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: Color(0xFFF5F9FD),
+              color: Pallete.mainColor,
               borderRadius: BorderRadius.circular(10),
               boxShadow: [
                 BoxShadow(
-                  color: Color(0xFF475269).withOpacity(0.3),
+                  color: Pallete.secondColor.withOpacity(0.3),
                   blurRadius: 5,
                   spreadRadius: 1,
                 ),
@@ -61,7 +62,7 @@ class AllItemsWidget extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
-                        color: Color(0xFF475269),
+                        color: Pallete.secondColor,
                       ),
                     ),
                   ),
@@ -72,7 +73,7 @@ class AllItemsWidget extends StatelessWidget {
                     "New Shoe For Our Family",
                     style: TextStyle(
                         fontSize: 15,
-                        color: Color(0xFF475269).withOpacity(0.7)),
+                        color: Pallete.secondColor.withOpacity(0.7)),
                   ),
                 ),
                 Padding(
@@ -91,7 +92,7 @@ class AllItemsWidget extends StatelessWidget {
                       Container(
                         padding: EdgeInsets.all(5),
                         decoration: BoxDecoration(
-                          color: Color(0xFF475269),
+                          color: Pallete.secondColor,
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Icon(

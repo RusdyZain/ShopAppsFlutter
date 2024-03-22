@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopapps/widgets/Pallete.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -19,11 +20,11 @@ class LoginPage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 15),
                 height: 55,
                 decoration: BoxDecoration(
-                  color: Color(0xFFF5F9FD),
+                  color: Pallete.mainColor,
                   borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
-                      color: Color(0xFF475269).withOpacity(0.3),
+                      color: Pallete.secondColor.withOpacity(0.3),
                       blurRadius: 5,
                       spreadRadius: 1,
                     )
@@ -34,7 +35,7 @@ class LoginPage extends StatelessWidget {
                     Icon(
                       Icons.person,
                       size: 27,
-                      color: Color(0xFF475269),
+                      color: Pallete.secondColor,
                     ),
                     SizedBox(width: 15),
                     Container(
@@ -55,11 +56,11 @@ class LoginPage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 15),
                 height: 55,
                 decoration: BoxDecoration(
-                  color: Color(0xFFF5F9FD),
+                  color: Pallete.mainColor,
                   borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
-                      color: Color(0xFF475269).withOpacity(0.3),
+                      color: Pallete.secondColor.withOpacity(0.3),
                       blurRadius: 5,
                       spreadRadius: 1,
                     )
@@ -70,7 +71,7 @@ class LoginPage extends StatelessWidget {
                     Icon(
                       Icons.lock,
                       size: 27,
-                      color: Color(0xFF475269),
+                      color: Pallete.secondColor,
                     ),
                     SizedBox(width: 15),
                     Container(
@@ -94,7 +95,7 @@ class LoginPage extends StatelessWidget {
                   child: Text(
                     "Forget Password",
                     style: TextStyle(
-                      color: Color(0xFF475269),
+                      color: Pallete.secondColor,
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
                     ),
@@ -113,11 +114,11 @@ class LoginPage extends StatelessWidget {
                   height: 55,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Color(0xFF475269),
+                    color: Pallete.secondColor,
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
-                        color: Color(0xFF475269).withOpacity(0.3),
+                        color: Pallete.secondColor.withOpacity(0.3),
                         blurRadius: 5,
                         spreadRadius: 1,
                       )
@@ -141,7 +142,7 @@ class LoginPage extends StatelessWidget {
                   Text(
                     "Don't Have Account? - ",
                     style: TextStyle(
-                      color: Color(0xFF475269).withOpacity(0.8),
+                      color: Pallete.secondColor.withOpacity(0.8),
                       fontSize: 16,
                     ),
                   ),
@@ -150,7 +151,7 @@ class LoginPage extends StatelessWidget {
                     child: Text(
                       "Sign Up",
                       style: TextStyle(
-                        color: Color(0xFF475269),
+                        color: Pallete.secondColor,
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
                       ),

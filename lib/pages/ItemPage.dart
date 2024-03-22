@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:shopapps/widgets/ItemBottomNavbar.dart';
+import 'package:shopapps/widgets/Pallete.dart';
 
 class ItemPage extends StatelessWidget {
   final int index;
@@ -26,11 +27,11 @@ class ItemPage extends StatelessWidget {
                       child: Container(
                         padding: EdgeInsets.all(8),
                         decoration: BoxDecoration(
-                          color: Color(0xFFF5F9FD),
+                          color: Pallete.mainColor,
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: [
                             BoxShadow(
-                              color: Color(0xFF457269).withOpacity(0.3),
+                              color: Pallete.secondColor.withOpacity(0.3),
                               blurRadius: 5,
                               spreadRadius: 1,
                             ),
@@ -39,7 +40,7 @@ class ItemPage extends StatelessWidget {
                         child: Icon(
                           Icons.arrow_back,
                           size: 30,
-                          color: Color(0xFF475269),
+                          color: Pallete.secondColor,
                         ),
                       ),
                     ),
@@ -50,7 +51,7 @@ class ItemPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10),
                         boxShadow: [
                           BoxShadow(
-                            color: Color(0xFF457269).withOpacity(0.3),
+                            color: Pallete.secondColor.withOpacity(0.3),
                             blurRadius: 5,
                             spreadRadius: 1,
                           ),
@@ -85,14 +86,14 @@ class ItemPage extends StatelessWidget {
                 width: double.infinity,
                 padding: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
                 decoration: BoxDecoration(
-                  color: Color(0xFFF5F9FD),
+                  color: Pallete.mainColor,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(35),
                     topRight: Radius.circular(35),
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: Color(0xFF475269).withOpacity(0.4),
+                      color: Pallete.secondColor.withOpacity(0.4),
                       blurRadius: 10,
                       spreadRadius: 1,
                     )
@@ -108,7 +109,7 @@ class ItemPage extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.bold,
-                            color: Color(0xFF475269),
+                            color: Pallete.secondColor,
                           ),
                         ),
                         Text(
@@ -142,7 +143,7 @@ class ItemPage extends StatelessWidget {
                     Text(
                       "This is description of the shoe product. This is desription of the shoe product.",
                       style: TextStyle(
-                        color: Color(0xFF475269),
+                        color: Pallete.secondColor,
                         fontSize: 17,
                       ),
                       textAlign: TextAlign.justify,
@@ -154,7 +155,7 @@ class ItemPage extends StatelessWidget {
                           "Size: ",
                           style: TextStyle(
                             fontSize: 20,
-                            color: Color(0xFF475269),
+                            color: Pallete.secondColor,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
@@ -168,11 +169,12 @@ class ItemPage extends StatelessWidget {
                                 alignment: Alignment.center,
                                 margin: EdgeInsets.symmetric(horizontal: 5),
                                 decoration: BoxDecoration(
-                                  color: Color(0XFFF5F9FD),
+                                  color: Pallete.mainColor,
                                   borderRadius: BorderRadius.circular(10),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Color(0xFF475269).withOpacity(0.3),
+                                      color:
+                                          Pallete.secondColor.withOpacity(0.3),
                                       blurRadius: 5,
                                       spreadRadius: 1,
                                     )

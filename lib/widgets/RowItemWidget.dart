@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shopapps/widgets/Pallete.dart';
 
 class RowItemWidget extends StatelessWidget {
   const RowItemWidget({super.key});
@@ -20,7 +21,7 @@ class RowItemWidget extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 10),
               height: 180,
               decoration: BoxDecoration(
-                color: Color(0xFFF5F9FD),
+                color: Pallete.mainColor,
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
@@ -51,7 +52,7 @@ class RowItemWidget extends StatelessWidget {
                         Text(
                           "Shoe Family ${i}",
                           style: TextStyle(
-                            color: Color(0xFF475269),
+                            color: Pallete.secondColor,
                             fontSize: 23,
                             fontWeight: FontWeight.w500,
                           ),
@@ -60,7 +61,7 @@ class RowItemWidget extends StatelessWidget {
                         Text(
                           "Men's Shoe",
                           style: TextStyle(
-                            color: Color(0xFF475269).withOpacity(0.8),
+                            color: Pallete.secondColor.withOpacity(0.8),
                             fontSize: 16,
                           ),
                         ),
@@ -79,7 +80,7 @@ class RowItemWidget extends StatelessWidget {
                             Container(
                               padding: EdgeInsets.all(10),
                               decoration: BoxDecoration(
-                                color: Color(0xFF475269),
+                                color: Pallete.secondColor,
                                 borderRadius: BorderRadius.circular(10),
                               ),
                               child: Icon(

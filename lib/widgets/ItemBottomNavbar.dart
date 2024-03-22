@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shopapps/widgets/BottomCartSheet.dart';
+import 'package:shopapps/widgets/Pallete.dart';
 import 'package:sliding_sheet2/sliding_sheet2.dart';
 
 class ItemBottomNavbar extends StatelessWidget {
@@ -9,7 +10,7 @@ class ItemBottomNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xFFF5F9FD),
+      color: Pallete.mainColor,
       padding: EdgeInsets.symmetric(
         vertical: 10,
         horizontal: 20,
@@ -23,11 +24,11 @@ class ItemBottomNavbar extends StatelessWidget {
               horizontal: 30,
             ),
             decoration: BoxDecoration(
-                color: Color(0xFF475269),
+                color: Pallete.secondColor,
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
-                    color: Color(0xFF475269),
+                    color: Pallete.secondColor,
                     blurRadius: 5,
                     spreadRadius: 1,
                   ),
@@ -57,11 +58,11 @@ class ItemBottomNavbar extends StatelessWidget {
               horizontal: 15,
             ),
             decoration: BoxDecoration(
-                color: Color(0xFF475269),
+                color: Pallete.secondColor,
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
-                    color: Color(0xFF475269),
+                    color: Pallete.secondColor,
                     blurRadius: 5,
                     spreadRadius: 1,
                   ),

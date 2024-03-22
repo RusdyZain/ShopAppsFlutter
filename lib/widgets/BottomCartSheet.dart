@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shopapps/widgets/Pallete.dart';
 
 class BottomCartSheet extends StatelessWidget {
   const BottomCartSheet({super.key});
@@ -10,7 +11,7 @@ class BottomCartSheet extends StatelessWidget {
       child: Container(
         height: 600,
         padding: EdgeInsets.only(top: 20),
-        color: Color(0xFFCEDDEE),
+        color: Pallete.bgColor,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -26,11 +27,11 @@ class BottomCartSheet extends StatelessWidget {
                         padding: EdgeInsets.symmetric(horizontal: 10),
                         height: 140,
                         decoration: BoxDecoration(
-                          color: Color(0xFFFF5F9FD),
+                          color: Pallete.mainColor,
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: [
                             BoxShadow(
-                              color: Color(0xFF475269).withOpacity(0.3),
+                              color: Pallete.secondColor.withOpacity(0.3),
                               blurRadius: 5,
                               spreadRadius: 1,
                             )
@@ -64,7 +65,7 @@ class BottomCartSheet extends StatelessWidget {
                                   Text(
                                     "Nike Shoe",
                                     style: TextStyle(
-                                      color: Color(0xFF475269),
+                                      color: Pallete.secondColor,
                                       fontSize: 23,
                                       fontWeight: FontWeight.w500,
                                     ),
@@ -74,12 +75,12 @@ class BottomCartSheet extends StatelessWidget {
                                       Container(
                                         padding: EdgeInsets.all(5),
                                         decoration: BoxDecoration(
-                                          color: Color(0xFFF5F9FD),
+                                          color: Pallete.mainColor,
                                           borderRadius:
                                               BorderRadius.circular(10),
                                           boxShadow: [
                                             BoxShadow(
-                                              color: Color(0xFF475269)
+                                              color: Pallete.secondColor
                                                   .withOpacity(0.3),
                                               blurRadius: 5,
                                               spreadRadius: 1,
@@ -97,7 +98,7 @@ class BottomCartSheet extends StatelessWidget {
                                         child: Text(
                                           "02",
                                           style: TextStyle(
-                                            color: Color(0xFF475269),
+                                            color: Pallete.secondColor,
                                             fontSize: 18,
                                             fontWeight: FontWeight.w500,
                                           ),
@@ -106,12 +107,12 @@ class BottomCartSheet extends StatelessWidget {
                                       Container(
                                         padding: EdgeInsets.all(5),
                                         decoration: BoxDecoration(
-                                          color: Color(0xFFF5F9FD),
+                                          color: Pallete.mainColor,
                                           borderRadius:
                                               BorderRadius.circular(10),
                                           boxShadow: [
                                             BoxShadow(
-                                              color: Color(0xFF475269)
+                                              color: Pallete.secondColor
                                                   .withOpacity(0.3),
                                               blurRadius: 5,
                                               spreadRadius: 1,
@@ -140,7 +141,7 @@ class BottomCartSheet extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(10),
                                       boxShadow: [
                                         BoxShadow(
-                                          color: Color(0xFF475269)
+                                          color: Pallete.secondColor
                                               .withOpacity(0.4),
                                           blurRadius: 5,
                                           spreadRadius: 1,
@@ -157,7 +158,7 @@ class BottomCartSheet extends StatelessWidget {
                                   Text(
                                     "\$50",
                                     style: TextStyle(
-                                      color: Color(0xFF475269),
+                                      color: Pallete.secondColor,
                                       fontWeight: FontWeight.w500,
                                       fontSize: 20,
                                     ),
@@ -173,11 +174,11 @@ class BottomCartSheet extends StatelessWidget {
                           EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                       padding: EdgeInsets.all(15),
                       decoration: BoxDecoration(
-                        color: Color(0xFFF5F9FD),
+                        color: Pallete.mainColor,
                         borderRadius: BorderRadius.circular(0.3),
                         boxShadow: [
                           BoxShadow(
-                            color: Color(0xFF475269).withOpacity(0.3),
+                            color: Pallete.secondColor.withOpacity(0.3),
                             spreadRadius: 1,
                             blurRadius: 5,
                           )
@@ -193,7 +194,7 @@ class BottomCartSheet extends StatelessWidget {
                                 style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
-                                  color: Color(0xFF475269),
+                                  color: Pallete.secondColor,
                                 ),
                               ),
                               Text(
@@ -201,7 +202,7 @@ class BottomCartSheet extends StatelessWidget {
                                 style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
-                                  color: Color(0xFF475269),
+                                  color: Pallete.secondColor,
                                 ),
                               )
                             ],
@@ -209,7 +210,7 @@ class BottomCartSheet extends StatelessWidget {
                           Divider(
                             height: 20,
                             thickness: 0.5,
-                            color: Color(0xFF475269),
+                            color: Pallete.secondColor,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -219,7 +220,7 @@ class BottomCartSheet extends StatelessWidget {
                                 style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
-                                  color: Color(0xFF475269),
+                                  color: Pallete.secondColor,
                                 ),
                               ),
                               Text(
@@ -227,7 +228,7 @@ class BottomCartSheet extends StatelessWidget {
                                 style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
-                                  color: Color(0xFF475269),
+                                  color: Pallete.secondColor,
                                 ),
                               )
                             ],
@@ -235,7 +236,7 @@ class BottomCartSheet extends StatelessWidget {
                           Divider(
                             height: 20,
                             thickness: 0.4,
-                            color: Color(0xFF475269),
+                            color: Pallete.secondColor,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -245,7 +246,7 @@ class BottomCartSheet extends StatelessWidget {
                                 style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
-                                  color: Color(0xFF475269),
+                                  color: Pallete.secondColor,
                                 ),
                               ),
                               Text(
@@ -269,14 +270,14 @@ class BottomCartSheet extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 20),
               height: 80,
               decoration: BoxDecoration(
-                color: Color(0xFFF5F9FD),
+                color: Pallete.mainColor,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(25),
                   topRight: Radius.circular(25),
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: Color(0xFF475269).withOpacity(0.3),
+                    color: Pallete.secondColor.withOpacity(0.3),
                     spreadRadius: 1,
                     blurRadius: 5,
                   )
@@ -292,7 +293,7 @@ class BottomCartSheet extends StatelessWidget {
                         "Total",
                         style: TextStyle(
                           fontSize: 22,
-                          color: Color(0xFF475269),
+                          color: Pallete.secondColor,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -315,7 +316,7 @@ class BottomCartSheet extends StatelessWidget {
                         horizontal: 20,
                       ),
                       decoration: BoxDecoration(
-                        color: Color(0xFF475269),
+                        color: Pallete.secondColor,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Text(

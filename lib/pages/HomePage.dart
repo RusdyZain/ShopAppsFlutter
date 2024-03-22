@@ -2,6 +2,7 @@ import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:shopapps/widgets/AllItemsWidget.dart';
 import 'package:shopapps/widgets/HomeBottomNavbar.dart';
+import 'package:shopapps/widgets/Pallete.dart';
 import 'package:shopapps/widgets/RowItemWidget.dart';
 
 class HomePage extends StatelessWidget {
@@ -22,11 +23,11 @@ class HomePage extends StatelessWidget {
                     Container(
                       padding: EdgeInsets.all(8),
                       decoration: BoxDecoration(
-                        color: Color(0xFFF5F9FD),
+                        color: Pallete.mainColor,
                         borderRadius: BorderRadius.circular(10),
                         boxShadow: [
                           BoxShadow(
-                            color: Color(0xFF475269).withOpacity(0.3),
+                            color: Pallete.secondColor.withOpacity(0.3),
                             blurRadius: 5,
                             spreadRadius: 1,
                           ),
@@ -35,17 +36,17 @@ class HomePage extends StatelessWidget {
                       child: Icon(
                         Icons.sort,
                         size: 30,
-                        color: Color(0xFF475269),
+                        color: Pallete.secondColor,
                       ),
                     ),
                     Container(
                       padding: EdgeInsets.all(8),
                       decoration: BoxDecoration(
-                        color: Color(0xFFF5F9FD),
+                        color: Pallete.mainColor,
                         borderRadius: BorderRadius.circular(10),
                         boxShadow: [
                           BoxShadow(
-                            color: Color(0xFF475269).withOpacity(0.3),
+                            color: Pallete.secondColor.withOpacity(0.3),
                             blurRadius: 5,
                             spreadRadius: 1,
                           ),
@@ -65,7 +66,7 @@ class HomePage extends StatelessWidget {
                         child: Icon(
                           Icons.notifications,
                           size: 30,
-                          color: Color(0xFF475269),
+                          color: Pallete.secondColor,
                         ),
                       ),
                     ),
@@ -78,11 +79,11 @@ class HomePage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 15),
                 height: 55,
                 decoration: BoxDecoration(
-                  color: Color(0xFFF5F9FD),
+                  color: Pallete.mainColor,
                   borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
-                      color: Color(0xFF475269).withOpacity(0.3),
+                      color: Pallete.secondColor.withOpacity(0.3),
                       blurRadius: 5,
                       spreadRadius: 1,
                     ),
@@ -103,7 +104,7 @@ class HomePage extends StatelessWidget {
                     Icon(
                       Icons.search,
                       size: 27,
-                      color: Color(0xFF475269),
+                      color: Pallete.mainColor,
                     ),
                   ],
                 ),
