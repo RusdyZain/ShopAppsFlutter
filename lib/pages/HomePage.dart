@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
               Search(),
               SizedBox(height: 30),
               RowItemWidget(),
-              SizedBox(height: 20),
+              SizedBox(height: 5),
               AllItemsWidget(),
             ],
           ),

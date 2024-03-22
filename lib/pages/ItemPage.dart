@@ -4,7 +4,7 @@ import 'package:shopapps/widgets/ItemBottomNavbar.dart';
 import 'package:shopapps/widgets/Pallete.dart';
 
 class ItemPage extends StatelessWidget {
-  final int index;
+  final String index;
 
   const ItemPage({key, required this.index}) : super(key: key);
 
@@ -73,7 +73,7 @@ class ItemPage extends StatelessWidget {
                   alignment: Alignment.center,
                   children: [
                     Image.asset(
-                      "images/${index + 1}.png",
+                      "images/${index}.png",
                       height: 350,
                       width: 350,
                       fit: BoxFit.contain,
@@ -113,7 +113,7 @@ class ItemPage extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          "\$5${index + 3}",
+                          "\$5${index}",
                           style: TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.w500,

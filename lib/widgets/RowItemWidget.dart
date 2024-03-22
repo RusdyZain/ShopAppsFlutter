@@ -1,31 +1,9 @@
 import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shopapps/data/data.dart';
 import 'package:shopapps/widgets/Pallete.dart';
 import 'package:http/http.dart' as http;
-
-class ShoeItem {
-  final String image;
-  final String title;
-  final String subtitle;
-  final String price;
-
-  ShoeItem({
-    required this.image,
-    required this.title,
-    required this.subtitle,
-    required this.price,
-  });
-
-  factory ShoeItem.fromJson(Map<String, dynamic> json) {
-    return ShoeItem(
-      image: json['image'] as String,
-      title: json['title'] as String,
-      subtitle: json['subtitle'] as String,
-      price: json['price'] as String,
-    );
-  }
-}
 
 class RowItemWidget extends StatelessWidget {
   const RowItemWidget({super.key});
